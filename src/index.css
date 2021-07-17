@@ -15,6 +15,12 @@ body {
 }
 
 .container {
+  background: black;
+  margin: auto;
+  width: 80%;
+  height: 50vh;
+  /* background-size: cover;
+  background-image: url(./Components/Images/bg-image-daytime.jpg); */
 }
 
 /* General Components */
@@ -59,4 +65,36 @@ h6 {
 p {
   font-size: 18px;
   line-height: 28px;
+}
+
+.expand-btn {
+  width: 146px;
+  height: 56px;
+  background: var(--tirtiary-color);
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+.expand-btn h6 {
+  font-size: 16px;
+  letter-spacing: 5px;
+  opacity: 0.5;
+  margin-left: 0.5rem;
+}
+.arrow {
+  transform: rotate(-180deg);
+  width: 40px;
+  height: 40px;
+}
+.arrow-active {
+  transform: rotate(0);
+  width: 40px;
+  height: 40px;
+  padding-left: 4px;
+}
+.expand-btn:hover .arrow,
+.expand-btn:hover .arrow-active {
+  opacity: 0.5;
 }
