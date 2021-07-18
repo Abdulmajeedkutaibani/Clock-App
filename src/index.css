@@ -15,12 +15,13 @@ body {
 }
 
 .container {
-  background: black;
   margin: auto;
   width: 80%;
-  height: 50vh;
-  /* background-size: cover;
-  background-image: url(./Components/Images/bg-image-daytime.jpg); */
+  height: 800px;
+  padding: 4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./Components/Images/bg-image-daytime.jpg);
 }
 
 /* General Components */
@@ -67,6 +68,16 @@ p {
   line-height: 28px;
 }
 
+/* Main */
+.main-clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* Expand-Btn */
 .expand-btn {
   width: 146px;
   height: 56px;
@@ -76,6 +87,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 13px;
+  cursor: pointer;
 }
 .expand-btn h6 {
   font-size: 16px;
@@ -97,4 +109,77 @@ p {
 .expand-btn:hover .arrow,
 .expand-btn:hover .arrow-active {
   opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .expand-btn {
+    width: 115px;
+    height: 39px;
+    gap: 15px;
+  }
+  .expand-btn img {
+    width: 32px;
+    height: 32px;
+  }
+  .arrow,
+  .arrow-active {
+    width: 32px;
+    height: 32px;
+  }
+  .expand-btn h6 {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 3.75px;
+  }
+  .arrow-active {
+    padding-left: 3px;
+  }
+}
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+}
+.time {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.greeting {
+  display: flex;
+  gap: 16px;
+  color: var(--tirtiary-color);
+  align-items: center;
+}
+.greeting img {
+  width: 24px;
+  height: 24px;
+}
+.clock-info {
+  display: flex;
+  color: var(--tirtiary-color);
+  align-items: flex-end;
+}
+.clock-format {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 80px;
+}
+.location {
+  color: var(--tirtiary-color);
+}
+.more-btn {
+  align-self: flex-end;
+}
+
+/* Quote */
+.quote-container {
+  color: var(--tirtiary-color);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.quote {
+  font-weight: normal;
 }
