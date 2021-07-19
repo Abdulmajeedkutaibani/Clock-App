@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Quote = () => {
   return (
-    <div className='quote-container'>
+    <div className='quote-container' id='quote-container'>
       <h5 className='quote'>
         “The science of operations, as derived from mathematics more especially,
         is a science of itself, and has its own abstract truth and value.”

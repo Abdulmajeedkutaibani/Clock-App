@@ -1,12 +1,17 @@
 import './index.css';
 import { TimeAndInfo } from './Components/TimeAndInfo';
 import { Quote } from './Components/Quote';
-import { MainClock } from './Components/MainClock';
+
+import { MoreInfo } from './Components/MoreInfo';
 
 function App() {
   return (
     <div className='container'>
-      <MainClock />
+      <div className='clock-container'>
+        <Quote />
+        <TimeAndInfo />
+        <MoreInfo />
+      </div>
     </div>
   );
 }

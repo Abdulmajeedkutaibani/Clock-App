@@ -7,6 +7,18 @@ export const Btn = () => {
   const handleClick = () => {
     arrow === 'arrow' ? setArrow('arrow-active') : setArrow('arrow');
     btnText === 'MORE' ? setBtnText('LESS') : setBtnText('MORE');
+
+    arrow === 'arrow-active'
+      ? (document.getElementById('more-info-container').style.height = '0')
+      : (document.getElementById('more-info-container').style.height = '50%');
+
+    arrow === 'arrow'
+      ? (document.getElementById('more-info').style.display = 'flex')
+      : (document.getElementById('more-info').style.display = 'none');
+
+    arrow === 'arrow-active'
+      ? (document.getElementById('quote-container').style.display = 'flex')
+      : (document.getElementById('quote-container').style.display = 'none');
   };
   return (
     <div>
