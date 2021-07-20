@@ -2,7 +2,7 @@ import React from 'react';
 import { Btn } from './Btn';
 import sunIcon from './Images/icon-sun.svg';
 
-export const TimeAndInfo = () => {
+export const TimeAndInfo = ({ time }) => {
   return (
     <div className='time-info'>
       <div className='time'>
@@ -11,7 +11,7 @@ export const TimeAndInfo = () => {
           <h4>GOOD MORNING, IT'S CURRENTLY</h4>
         </div>
         <div className='clock-info'>
-          <h1 className='clock'>11:37</h1>
+          <h1 className='clock'>{time}</h1>
           <span className='clock-format'>BST</span>
         </div>
         <div className='location'>
