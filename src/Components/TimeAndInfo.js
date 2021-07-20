@@ -1,14 +1,18 @@
 import React from 'react';
 import { Btn } from './Btn';
-import sunIcon from './Images/icon-sun.svg';
-
-export const TimeAndInfo = ({ time, country, country_code }) => {
+export const TimeAndInfo = ({
+  icon,
+  greeting,
+  time,
+  country,
+  country_code,
+}) => {
   return (
     <div className='time-info'>
       <div className='time'>
-        <div className='greeting'>
-          <img src={sunIcon} alt='' />
-          <h4>GOOD MORNING, IT'S CURRENTLY</h4>
+        <div className='greeting' id='greeting'>
+          <img src={icon} alt='' />
+          <h4>{greeting}</h4>
         </div>
         <div className='clock-info'>
           <h1 className='clock'>{time}</h1>

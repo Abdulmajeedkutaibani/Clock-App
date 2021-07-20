@@ -19,10 +19,13 @@ body {
   margin: auto;
   height: 100vh;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-image: url(./Components/Images/bg-image-daytime.jpg);
 }
-
+.container-dark {
+  background-image: url(./Components/Images/bg-image-nighttime.jpg);
+}
 /* General Components */
 h1 {
   font-weight: bold;
@@ -178,14 +181,31 @@ p {
   display: flex;
   flex-direction: column;
   gap: 13px;
-  padding: 0 10%;
+  padding: 3% 10%;
+  transition: height 0.7s;
+  visibility: visible;
 }
 .quote {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.quote img {
+  opacity: 0.5;
+  width: 16.67px;
+  height: 16.67px;
+  cursor: pointer;
+}
+.quote img:hover {
+  opacity: 1;
+}
+.quote-text {
   font-weight: normal;
 }
 
 /* More Info */
 .more-info-container {
+  transition: height 0.7s;
   bottom: 0;
   height: 0%;
   width: 100%;
@@ -220,6 +240,7 @@ p {
   flex-direction: column;
 }
 .clock-container {
+  background: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
