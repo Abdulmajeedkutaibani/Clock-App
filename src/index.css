@@ -12,6 +12,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  background: var(--secondary-color);
 }
 
 .container {
@@ -24,6 +25,7 @@ body {
   background-image: url(./Components/Images/bg-image-daytime.jpg);
 }
 .container-dark {
+  background-position-x: -3px;
   background-image: url(./Components/Images/bg-image-nighttime.jpg);
 }
 /* General Components */
@@ -139,7 +141,10 @@ p {
 .time-info {
   display: flex;
   justify-content: space-between;
-  padding: 5% 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 98px;
+  transition: transform 0.7s;
 }
 .time {
   display: flex;
@@ -169,6 +174,7 @@ p {
 }
 .location {
   color: var(--tirtiary-color);
+  text-transform: uppercase;
 }
 .more-btn {
   align-self: flex-end;
@@ -178,13 +184,12 @@ p {
 .quote-container {
   color: var(--tirtiary-color);
   width: 50%;
-  height: 50%;
   display: flex;
   flex-direction: column;
   gap: 13px;
-  padding: 3% 10%;
-  transition: height 0.7s;
-  visibility: visible;
+  padding-top: 56px;
+  padding-left: 10%;
+  transition: all 0.7s;
 }
 .quote {
   display: flex;
@@ -206,20 +211,29 @@ p {
 
 /* More Info */
 .more-info-container {
-  transition: height 0.7s;
+  overflow: hidden;
+  position: absolute;
   bottom: 0;
   height: 0%;
   width: 100%;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(40.7742px);
   padding: 0 10%;
+  transition: height 0.7s;
+}
+.container-dark .more-info-container {
+  background: rgba(0, 0, 0, 0.6);
 }
 .more-info {
+  padding: 7rem 0;
   color: var(--secondary-color);
   display: flex;
   align-items: center;
-  margin-top: 74px;
 }
+.container-dark .more-info {
+  color: var(--tirtiary-color);
+}
+
 .more-info .col-1,
 .more-info .col-2 {
   display: flex;
@@ -244,6 +258,47 @@ p {
   background: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .quote-container {
+    width: 100%;
+  }
+  .time-info {
+    flex-direction: column;
+    gap: 80px;
+    height: 60%;
+    justify-content: center;
+    padding-top: 80px;
+  }
+  .time-info h1 {
+    font-size: 175px;
+    line-height: 175px;
+  }
+  .time {
+    max-width: 100%;
+  }
+  .more-btn {
+    align-self: flex-start;
+  }
+  .greeting h4 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .more-info-container {
+    padding: 0 10%;
+  }
+
+  .more-info h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .more-info h6 {
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: normal;
+  }
 }

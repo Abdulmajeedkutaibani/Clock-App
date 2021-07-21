@@ -31,7 +31,9 @@ function App() {
     setLocation(response.data);
   };
   const getTime = async () => {
-    const response = await Axios.get('http://worldtimeapi.org/api/ip/');
+    const response = await Axios.get(
+      'https://ancient-woodland-98023.herokuapp.com'
+    );
     setMoreData(response.data);
     const timeData1 = response.data.datetime.split('T', 2);
     const timeData2 = timeData1[1].split('.', 1);
@@ -54,16 +56,16 @@ function App() {
     const afternoon = timeData[0] >= '12' && timeData[0] < '18';
 
     if (morning) {
-      return 'Good morning';
+      return 'GOOD MORNING, IT’S CURRENTLY';
     } else if (afternoon) {
-      return 'Good afternoon';
+      return 'GOOD AFTERNOON, IT’S CURRENTLY';
     } else {
-      return 'Good evening';
+      return 'GOOD EVENING, IT’S CURRENTLY';
     }
   };
   return (
     <div className='container' id='container'>
-      <div className='clock-container'>
+      <div className='clock-container' id='clock-container'>
         <Quote
           quote={data.content}
           refreshQuote={getData}
@@ -73,6 +75,7 @@ function App() {
           icon={iconChange()}
           greeting={greetingChange()}
           time={`${timeData[0]}:${timeData[1]}`}
+          abbreviation={moreData.abbreviation}
           country={location.country_name}
           country_code={location.country_code}
         />
