@@ -31,7 +31,7 @@ function App() {
     setLocation(response.data);
   };
   const getTime = async () => {
-    const response = await Axios.get('http://worldtimeapi.org/api/ip');
+    const response = await Axios.get('http://worldtimeapi.org/api/ip/');
     setMoreData(response.data);
     const timeData1 = response.data.datetime.split('T', 2);
     const timeData2 = timeData1[1].split('.', 1);
