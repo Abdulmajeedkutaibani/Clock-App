@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Clock-App/static/css/main.edf40cca.chunk.css",
+    "main.js": "/Clock-App/static/js/main.6811c13f.chunk.js",
+    "main.js.map": "/Clock-App/static/js/main.6811c13f.chunk.js.map",
+    "runtime-main.js": "/Clock-App/static/js/runtime-main.b78c61bc.js",
+    "runtime-main.js.map": "/Clock-App/static/js/runtime-main.b78c61bc.js.map",
+    "static/js/2.64566a63.chunk.js": "/Clock-App/static/js/2.64566a63.chunk.js",
+    "static/js/2.64566a63.chunk.js.map": "/Clock-App/static/js/2.64566a63.chunk.js.map",
+    "static/js/3.18aa8648.chunk.js": "/Clock-App/static/js/3.18aa8648.chunk.js",
+    "static/js/3.18aa8648.chunk.js.map": "/Clock-App/static/js/3.18aa8648.chunk.js.map",
+    "index.html": "/Clock-App/index.html",
+    "static/css/main.edf40cca.chunk.css.map": "/Clock-App/static/css/main.edf40cca.chunk.css.map",
+    "static/js/2.64566a63.chunk.js.LICENSE.txt": "/Clock-App/static/js/2.64566a63.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Clock-App/static/media/bg-image-nighttime.aa5161f5.jpg",
+    "static/media/icon-arrow-up.9f27dbc9.svg": "/Clock-App/static/media/icon-arrow-up.9f27dbc9.svg",
+    "static/media/icon-moon.83b9f0db.svg": "/Clock-App/static/media/icon-moon.83b9f0db.svg",
+    "static/media/icon-refresh.79192c41.svg": "/Clock-App/static/media/icon-refresh.79192c41.svg",
+    "static/media/icon-sun.cb7a2aac.svg": "/Clock-App/static/media/icon-sun.cb7a2aac.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b78c61bc.js",
+    "static/js/2.64566a63.chunk.js",
+    "static/css/main.edf40cca.chunk.css",
+    "static/js/main.6811c13f.chunk.js"
+  ]
+}
