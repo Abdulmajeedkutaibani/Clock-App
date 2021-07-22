@@ -4,21 +4,17 @@ import { useState } from 'react';
 export const Btn = () => {
   const [arrow, setArrow] = useState('arrow');
   const [btnText, setBtnText] = useState('MORE');
+
   const handleClick = () => {
     arrow === 'arrow' ? setArrow('arrow-active') : setArrow('arrow');
     btnText === 'MORE' ? setBtnText('LESS') : setBtnText('MORE');
-
-    arrow === 'arrow'
-      ? (document.getElementById('time-info').style.transform =
-          'translateY(-125%)')
-      : (document.getElementById('time-info').style.transform =
-          'translateY(0%)');
 
     arrow === 'arrow'
       ? (document.getElementById('quote-container').style.transform =
           'translateY(-100%)')
       : (document.getElementById('quote-container').style.transform =
           'translateY(0%)');
+
     arrow === 'arrow'
       ? (document.getElementById('quote-container').style.opacity = '0')
       : (document.getElementById('quote-container').style.opacity = '1');
@@ -27,15 +23,29 @@ export const Btn = () => {
       ? (document.getElementById('more-info-container').style.height = '50%')
       : (document.getElementById('more-info-container').style.height = '0%');
 
-    // arrow === 'arrow-active'
-    //   ? (document.getElementById('more-info-container').style.maxHeight = '0')
-    //   : (document.getElementById('more-info-container').style.maxHeight =
-    //       '60%');
+    // ------------------------
+    // ------------------------
 
-    // arrow === 'arrow'
-    //   ? (document.getElementById('quote-container').style.display = 'none')
-    //   : (document.getElementById('quote-container').style.display = 'flex');
+    if (arrow === 'arrow' && window.innerWidth > 1024) {
+      document.getElementById('time-info').style.transform =
+        'translateY(-46vh)';
+    } else if (
+      arrow === 'arrow' &&
+      window.innerWidth < 1024 &&
+      window.innerWidth > 768
+    ) {
+      document.getElementById('time-info').style.transform =
+        'translateY(-45vh)';
+    } else if (window.innerWidth < 767) {
+      document.getElementById('time-info').style.transform =
+        'translateY(-50vh)';
+    }
+
+    if (arrow === 'arrow-active') {
+      document.getElementById('time-info').style.transform = 'translateY(0)';
+    }
   };
+
   return (
     <div>
       <div className='expand-btn' onClick={handleClick}>
