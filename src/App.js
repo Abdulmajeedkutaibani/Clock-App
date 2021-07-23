@@ -55,15 +55,27 @@ function App() {
   const greetingChange = () => {
     const morning = timeData[0] >= '05' && timeData[0] < '12';
     const afternoon = timeData[0] >= '12' && timeData[0] < '18';
+    const evining = !morning && !afternoon;
+    let greeting = '';
 
     if (morning || afternoon) {
       document.getElementById('greeting-image').classList.add('rotate-image');
     }
     if (morning) {
-      return 'GOOD MORNING, IT’S CURRENTLY';
+      greeting = 'GOOD MORNING, IT’S CURRENTLY';
     } else if (afternoon) {
-      return 'GOOD AFTERNOON, IT’S CURRENTLY';
-    } else return 'GOOD EVENING, IT’S CURRENTLY';
+      greeting = 'GOOD AFTERNOON, IT’S CURRENTLY';
+    } else if (evining) {
+      greeting = 'GOOD EVENING, IT’S CURRENTLY';
+    }
+
+    if (morning && window.innerWidth < 767) {
+      greeting = 'GOOD MORNING, IT’S CURRENTLY';
+    } else if (afternoon && window.innerWidth < 767) {
+      greeting = 'GOOD AFTERNOON, IT’S CURRENTLY';
+    } else if (evining && window.innerWidth < 767) greeting = 'GOOD EVENING';
+
+    return greeting;
   };
   return (
     <div className='container' id='container'>
