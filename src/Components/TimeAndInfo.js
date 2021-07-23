@@ -12,7 +12,7 @@ export const TimeAndInfo = ({
     <div className='time-info' id='time-info'>
       <div className='time'>
         <div className='greeting' id='greeting'>
-          <img src={icon} alt='' />
+          <img id='greeting-image' src={icon} alt='' />
           <h4>{greeting}</h4>
         </div>
         <div className='clock-info'>

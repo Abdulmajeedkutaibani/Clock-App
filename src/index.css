@@ -113,7 +113,7 @@ p {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .expand-btn {
     width: 115px;
     height: 39px;
@@ -139,6 +139,7 @@ p {
 }
 
 .time-info {
+  height: 50%;
   display: flex;
   justify-content: space-between;
   padding-left: 10%;
@@ -149,6 +150,7 @@ p {
 .time {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 16px;
   max-width: 60%;
 }
@@ -161,6 +163,17 @@ p {
 .greeting img {
   width: 24px;
   height: 24px;
+}
+.rotate-image {
+  animation: rotation 6.5s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 .clock-info {
   display: flex;
@@ -184,6 +197,7 @@ p {
 .quote-container {
   color: var(--tirtiary-color);
   width: 50%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -211,20 +225,21 @@ p {
 
 /* More Info */
 .more-info-container {
+  display: flex;
   overflow: hidden;
-  position: absolute;
   bottom: 0;
   height: 0%;
   width: 100%;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(40.7742px);
   padding: 0 10%;
-  transition: height 0.7s;
+  transition: all 1s;
 }
 .container-dark .more-info-container {
   background: rgba(0, 0, 0, 0.6);
 }
 .more-info {
+  width: 100%;
   padding: 7rem 0;
   color: var(--secondary-color);
   display: flex;
@@ -256,7 +271,7 @@ p {
   flex-direction: column;
 }
 .clock-container {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -264,13 +279,18 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
+  .quote-container,
+  .time-info,
+  .more-info-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   .quote-container {
     width: 100%;
   }
   .time-info {
     flex-direction: column;
     gap: 80px;
-    height: 60%;
     justify-content: center;
     padding-top: 80px;
     transform: translateY(0%);
@@ -305,17 +325,13 @@ p {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .quote-container,
-  .time-info,
-  .more-info-container {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+@media screen and (max-width: 767px) {
   .time-info {
-    justify-content: flex-end;
+    max-height: 40%;
+    max-width: 100%;
+    justify-content: center;
     gap: 16px;
-    padding-bottom: 40px;
+    padding-top: 0px;
   }
   .quote-container h5 {
     font-size: 12px;
@@ -343,6 +359,7 @@ p {
     justify-content: flex-start;
     width: 100%;
     gap: 16px;
+    padding: 4rem 0;
   }
   .more-info .col-1,
   .more-info .col-2 {

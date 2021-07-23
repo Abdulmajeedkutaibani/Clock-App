@@ -51,17 +51,19 @@ function App() {
   if (timeData[0] > '18' && timeData[0] <= '24') {
     backgroundChange();
   }
+
   const greetingChange = () => {
     const morning = timeData[0] >= '05' && timeData[0] < '12';
     const afternoon = timeData[0] >= '12' && timeData[0] < '18';
 
+    if (morning || afternoon) {
+      document.getElementById('greeting-image').classList.add('rotate-image');
+    }
     if (morning) {
       return 'GOOD MORNING, IT’S CURRENTLY';
     } else if (afternoon) {
       return 'GOOD AFTERNOON, IT’S CURRENTLY';
-    } else {
-      return 'GOOD EVENING, IT’S CURRENTLY';
-    }
+    } else return 'GOOD EVENING, IT’S CURRENTLY';
   };
   return (
     <div className='container' id='container'>
