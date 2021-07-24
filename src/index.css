@@ -236,7 +236,7 @@ p {
   transition: all 1s;
 }
 .container-dark .more-info-container {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
 }
 .more-info {
   width: 100%;
